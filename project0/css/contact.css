@@ -1,0 +1,22 @@
+
+#cont-jumbotron {
+
+	background-color: #B4045F;
+
+	padding-top: 10%;
+}
+
+#contact-slogan{
+	color:#E4B307 !important;
+}
+
+@media (max-width: 991.98px){
+
+
+	#cont-jumbotron {
+
+	background-color: #B4045F;
+
+	padding-top: 30%;
+
+}

@@ -1,0 +1,108 @@
+
+.navbar {
+	background-color: #132667 !important;
+	
+}
+.nav-item {
+
+	color: #E4B307 !important;
+
+}
+.navbar-brand {
+	font-size:40px;
+	font-weight: 50px;
+	font-family: 'Herr Von Muellerhoff', cursive;
+	color: #E4B307 !important;
+	font-weight: 10px;
+	background-color: #B4045F ;
+	/*border-radius: 50%;*/
+	border-left: #E4B307;
+	border-bottom: #E4B307;
+	border-style: double;
+	border-top-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+	border-outline:20px;
+
+}
+
+#bg {
+	background:url(../img/boy&mom.png) center;
+	background-size: /*100% 120%;*/100% auto;
+	background-repeat: no-repeat;
+	padding-top:5%;
+	padding-bottom: 5%;
+}
+
+#jumbotron {
+	background:transparent;
+	color: white;
+	text-shadow: 2px 2px 12px /*#FF0000*/#132667;
+	padding-top: auto;
+	/*padding-bottom: -200px;*/
+}
+.subScribe {
+	background-color: #E4B307;
+
+}
+
+footer {
+	background-color: #132667 !important;
+	color:white;
+}
+
+h6 a{
+	color:#E4B307 !important;
+} /*Footer Notes */
+
+/*=======================================================*/
+
+/*media breakpoint*/
+
+/*======================*/
+
+
+@media (max-width: 991.98px){
+
+	#bg {
+		background:url(../img/boy&mom.png) center;
+	background-size: /*100% 120%;*/100% 120%;
+	background-repeat: no-repeat;
+	padding-top:5%;
+	padding-bottom: 5%;
+}
+
+#jumbotron {
+	background:transparent;
+	color: white;
+	text-shadow: 2px 2px 12px /*#FF0000*/#132667;
+	padding-top: 50px;
+	padding-bottom:0px;
+}
+
+.subScribe {
+	background-color: #E4B307;
+	padding-top: 0px;
+}
+
+.navbar-brand {
+
+	font-size:200%; 
+	color: #E4B307 !important;
+	font-weight: 45%;
+	background-color: #B4045F ;
+	border-radius: 2%;
+	border-left: #E4B307;
+	border-bottom: #E4B307;
+	border-style: double;
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+
+}
+
+#cont-jumbotron {
+
+	background-color: #B4045F;
+
+	padding-top: 20%;
+}
+}
