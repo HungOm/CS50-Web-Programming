@@ -33,10 +33,18 @@
 	padding-bottom: 5%;
 }
 
+#aboutBg{
+	background-image:url(../img/about_us.jpg);
+	background-size: 100% auto;
+	padding-top: 10%;
+	height: 100%;
+	background-blend-mode: luminosity;
+}
+
 #jumbotron {
 	background:transparent;
 	color: white;
-	text-shadow: 2px 2px 12px /*#FF0000*/#132667;
+	text-shadow: 2px 2px 12px 12px /*#FF0000*/#132667;
 	padding-top: auto;
 	/*padding-bottom: -200px;*/
 }
@@ -44,7 +52,18 @@
 	background-color: #E4B307;
 
 }
+#ourStory{
+	background: #f3f3f3;
+	background-blend-mode: soft-light;
+	opacity: 0.6;
+}
 
+#volunteer {
+	background:#f3f3f3;
+	background-blend-mode: lighten;
+	box-shadow: 5px 10px 12px 12px/*#FF0000*/#132667;
+	opacity: 0.9;
+}
 footer {
 	background-color: #132667 !important;
 	color:white;
@@ -53,6 +72,8 @@ footer {
 h6 a{
 	color:#E4B307 !important;
 } /*Footer Notes */
+
+
 
 /*=======================================================*/
 
@@ -104,5 +125,14 @@ h6 a{
 	background-color: #B4045F;
 
 	padding-top: 20%;
+}
+
+#aboutBg{
+	background-image:url(../img/about_us.jpg);
+	background-size:cover;
+	padding-top: 60%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-blend-mode: luminosity;
 }
 }

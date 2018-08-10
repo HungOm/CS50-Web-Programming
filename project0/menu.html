@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./css/contact.css">
 
 
-    <title>Contact</title>
+    <title>Menu</title>
   </head>
   <body>
 
@@ -50,81 +50,56 @@
       </div>
     </div>
     </section>
-    <div class=" container">
-    <div class="card">
-      <div class="card-header text-center">
-        <h2> Have a word to us? Message us!</h2>
-       
-      </div>
-      <div class="card-body">
-          <form id="contact-form" method="post" action="" role="form">
-
-    <div class="messages"></div>
-
-    <div class="controls">
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
+    <div class="container row text-center">
+      <div class="col">
+          <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action active">
+              Weekly computer Programming Class
+            </button>
+            <button type="button" class="list-group-item list-group-item-action" disabled>Basic Computer & Office use </button>
+            <button type="button" class="list-group-item list-group-item-action">Mobil App building </button>
+            <button type="button" class="list-group-item list-group-item-action">Web Design in Bootstrap</button>
+            <button type="button" class="list-group-item list-group-item-action">Web programming in Python</button>
+          </div>    
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_need">Subject *</label>
-                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
-                        <option value=""></option>
-                        <option value="Request quotation">Request Brocher</option>
-                        <option value="Request order status">Admission Informations</option>
-                        <option value="Request copy of an invoice">Program informations</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-primary btn-send" value="Send message">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted">
-                    <strong>*</strong> These fields are required.For more informations, please visit our 
-                    <a href=".index.html" target="_blank">home page.</a>.</p>
-            </div>
-        </div>
-    </div>
 
-</form>
-      </div>
-    </div>
+        <aside class="col pull-right">
+          
+          <div class="table-responsive-xl">
+          <table class="table">
+          <caption>List of users</caption>
+          <thead>
+            <tr>
+              <th scope="col">Classes</th>
+              <th scope="col">Whole Day</th>
+              <th scope="col">Morning Session</th>
+              <th scope="col">Afternoon Session</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>KG1</td>
+              <td>Grade 1</td>
+              <td>Grade 2</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>KG 2</td>
+              <td>Grade 4</td>
+              <td>Grade 3</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>#</td>
+              <td>Grade 5</td>
+              <td>Grade 6</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        </aside>
+    
     </div>
     
 
