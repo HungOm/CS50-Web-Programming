@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+	{%block content %}
+	<h1>Hello,Welcom to my page!</h1>
+
+	<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Book_Id</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author </th>
+      <th scope="col">ISBN_No</th>
+      <th scope="col">Publish Year</th>
+    </tr>
+  </thead>
+  {% for book in books %}
+  <tbody>
+    <tr>
+    	
+      <th scope="row col-md">{{book.book_id}}</th>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.isbn_id}}</td>
+      <td>{{book.year}}</td>
+      
+    </tr>
+  </tbody>
+  {% endfor%}
+</table>
+	
+	{% endblock%}
+
+</body>
+</html>

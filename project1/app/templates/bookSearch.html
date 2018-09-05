@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+	{%block content %}
+	 <h1>Searh books</h1>
+   <br>
+   <hr>
+   <h3>
+    
+     {%for book in booksSearch%}
+     <div class="row text-center">
+      {{book}}
+      <a href="{{url_for('book',bookname=bookname)}}" method="post">
+      {{book.title}}
+      </a>
+      
+      
+    </div>
+     
+   {%endfor%}
+   </h3>
+    
+    <br>
+
+
+    <form action="" method="POST">
+      
+      <input type="text" name="search" placeholder="Enter your book name">
+      <button>Search</button>
+    </form>
+
+	
+	{% endblock%}
+
+</body>
+</html>

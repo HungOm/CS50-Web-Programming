@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+	{%block content %}
+	 <h1>Book Details</h1>
+   <br>
+   <hr>
+
+     <p>Book Name: {{booksDetails.title}}</p>
+     <p>Author : {{booksDetails.author}}</p>
+     <p>ISBN  : {{booksDetails.isbn_id}}</p>
+     <p>Publish Year  : {{booksDetails.year}}</p>
+    
+    <br>
+
+	
+	{% endblock%}
+
+</body>
+</html>

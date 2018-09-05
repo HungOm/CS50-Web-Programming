@@ -1,0 +1,7 @@
+Flask
+Flask-Session
+psycopg2
+SQLAlchemy
+WTF
+
+#Flask-migrate is a way of creating database table from auto-flask generating

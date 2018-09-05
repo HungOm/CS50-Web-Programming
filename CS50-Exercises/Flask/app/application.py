@@ -1,4 +1,7 @@
 from flask import Flask , render_template, request, session
+# the above sessin is the native session that store cookies in client side
+
+# the session below is the flask flask session, extension in flask that store info in the server side
 from flask_session import Session
 
 
@@ -24,6 +27,7 @@ def index():
 	# session["notes"] = []
 
 	if session.get("notes") is None:
+		# if there is no session stored in the note session the list will be emptied.
 		session["notes"] = []
 
 	if request.method == "POST":
