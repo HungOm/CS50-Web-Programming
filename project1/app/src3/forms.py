@@ -26,3 +26,11 @@ class LoginForm(object):
 	password=PasswordField('Password',validators=[DataRequired()])
 	rememberMe=BooleanField('remember me')
 	submit=SubmitField('Log In')
+
+
+	def user_validate(self,username):
+		user=db.execute("SELECT * FROM users2 WHERE username=:username",{"username":username}).fetchone()
+		if user is None:
+			raise ValidationError("Please check your username or password")
+		
+

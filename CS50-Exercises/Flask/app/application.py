@@ -27,11 +27,14 @@ def index():
 	# session["notes"] = []
 
 	if session.get("notes") is None:
-		# if there is no session stored in the note session the list will be emptied.
+		# if there is no session stored in the note session the empty list is created to begin.
 		session["notes"] = []
 
 	if request.method == "POST":
+		# if the session is post(new note is added)
 		note = request.form.get("note")
+		# this line will get the data(note in the form)
+		# add in the session by appending it in the list
 		session["notes"].append(note)
 
 	return render_template("index.html", notes=session["notes"])
