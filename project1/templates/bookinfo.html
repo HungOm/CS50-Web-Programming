@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+	{%block content %}
+	 <h1>Book Info</h1>
+   <br>
+   <hr>
+
+     <h4>Book Name: {{bookDetails.title}}</h4>
+     <h4>Author : {{bookDetails.author}}</h4>
+     <h4>ISBN  : {{bookDetails.isbn_id}}</h4>
+     <h4>Publish Year  : {{bookDetails.year}}</h4>
+    
+    <br>
+
+{%for info in bookReviews %}
+  <p><span style="color: blue;"><h4>{{info.username}}</h4></span>
+<hr>
+{{info.review}}
+  </p>
+
+  {% endfor %}
+	
+	{% endblock%}
+
+</body>
+</html>

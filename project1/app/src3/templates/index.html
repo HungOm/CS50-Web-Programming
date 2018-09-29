@@ -11,19 +11,21 @@
 
         {%for flight in flights%}
         <!-- <div class="container"> -->
-        <p style="font-weight: bold" class="text-left mr-3">
-            {{flight.flisht_id}}. {{flight.origin}} - {{flight.destination}}  - {{flight.duration}} minutes </p>
+        <h5 style="font-weight: bold" class="text-left mr-3">
+            {{flight.id}}. {{flight.origin}} - {{flight.destination}}  - {{flight.duration}} minutes </h5>
+            <p class="">Passenger: {{flight.name}}</p>
+            <p class="">Flight ID: {{flight.flight_id}}</p>
             <br>
         <!-- </div> -->
         {%endfor%}
 
 
-        <form action="{{ url_for('index') }}" method="post">
+        <form action="{{ url_for('book') }}" method="post">
 
         <div class="form-group">
             <select class="form-control" name="flight_id">
                 {% for flight in flights %}
-                    <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
+                    <option value="{{ flight.flisht_id }}">{{ flight.origin }} to {{ flight.destination }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -34,6 +36,10 @@
 
         <div class="form-group text-left">
             <button class="btn btn-primary">Book Flight</button>
+        </div>
+
+        <div class="form-group texr-right">
+            <a href="{{url_for('signout')}}" class=" btn btn-primary">Sign Out</a>
         </div>
 
     </form>

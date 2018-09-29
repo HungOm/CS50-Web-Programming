@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    success
+{% endblock %}
+
+{% block content %}
+    <h1>You have signed out successfully!</h1><br>
+    <h3><a href="{{url_for('index')}}">Click here to log In or access our content!</a>
+
+{% endblock %}

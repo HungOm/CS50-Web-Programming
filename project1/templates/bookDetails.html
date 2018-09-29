@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book-Details
+{% endblock %}
+
+{% block content %}
+    <h1>Books</h1>
+    <hr>
+    {%for book in name_input%}
+        
+     <div class="row text-content">
+        <a href="{{url_for('search',book_id=book.book_id)}}">
+        {{book.book_id}}
+        
+        {{book.title}}
+        </a>
+    </div>
+    
+     {%endfor%}
+{% endblock %}

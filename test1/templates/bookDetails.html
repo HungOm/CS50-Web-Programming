@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book-Details
+{% endblock %}
+
+{% block content %}
+    <h1>Books</h1>
+    <hr>
+    {%for book in name_input%}
+        
+     <div class="row text-content">
+        <a href="{{url_for('search',book_id=book.book_id)}}">
+        {{book.book_id}}
+        
+        {{book.title}}
+        </a>
+    </div>
+
+<hr>
+<form class="justify-content-center" action="{{ url_for('search') }}" method="post">
+        <div class="form-group col-lg-3">
+            <input class="form-control" type='text' name="search" placeholder="type your reviews here">
+            
+        </div>
+        <div class="form-group col-lg-3"><button class="form-control btn btn-primary">Post</button>
+        </div>
+
+    </form>
+    
+     {%endfor%}
+{% endblock %}

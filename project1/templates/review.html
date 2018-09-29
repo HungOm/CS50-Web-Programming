@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book-search
+{% endblock %}
+
+{% block content %}
+    <h1>Books</h1>
+    <hr>
+    
+     <hr>
+         <form class="justify-content-center" action="" method="post">
+
+
+        <!-- <div class="form-group col-lg-3">
+            <input class="form-control" type='text' name="review" placeholder="enter your review here">
+            
+        </div> -->
+
+        <div class="form-group">
+            <label for="review">Review</label>
+            <textarea class="form-control" type="text" name="review" id="review" rows="3" placeholder="enter your review"></textarea>
+        </div>
+            <div class="form-group col-lg-3"><button class="form-control btn btn-primary">submit</button>
+        </div>
+
+    </form>
+    <hr>
+
+
+{% endblock %}

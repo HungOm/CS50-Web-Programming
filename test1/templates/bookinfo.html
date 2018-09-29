@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+	{%block content %}
+	 <h1>Book Info</h1>
+   <br>
+   <hr>
+
+     <h4>Book Name: {{bookDetails.title}}</h4>
+     <h4>Author : {{bookDetails.author}}</h4>
+     <h4>ISBN  : {{bookDetails.isbn_id}}</h4>
+     <h4>Publish Year  : {{bookDetails.year}}</h4>
+    
+    <br>
+  <hr>
+
+    <h2>Reviews by users</h2>
+
+    <form class="justify-content-center" method="post">
+      <h3>Add your review</h3>
+        <div class="form-group col-lg-3">
+            <input class="form-control" type='text' name="review" placeholder="type your reviews here">
+            
+        </div>
+        <div class="form-group col-lg-3"><button class="form-control btn btn-primary">Post</button>
+        </div>
+
+    </form>
+    <p><span>{{reviews.user_id}}</span>{{reviews.review}}</p>
+
+    
+
+	
+	{% endblock%}
+
+</body>
+</html>
