@@ -49,3 +49,9 @@ body {
 	  border-top-right-radius: 0;
 	}
 }
+	hr.type_4 {
+		border: 0 !important;
+		height: 55px !important;
+		background-image: url(../static/images/type_4.png) !important;
+		background-repeat: no-repeat !important;
+	}

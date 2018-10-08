@@ -136,6 +136,7 @@ def review(book_id):
 	# if bookReviews is None:
 		# return render_template('review.html',book)
 	# print(bookReviews)
+	bookDetails1=db.execute("SELECT * FROM myBooks WHERE book_id =:b_id",{"b_id":book_id}).fetchone()
 
 	if request.method=='POST':
 		review=request.form.get('review')
@@ -143,18 +144,20 @@ def review(book_id):
 		username=session['username']
 		user_id=db.execute(f"SELECT id FROM users2 WHERE username=:username",{"username":username}).fetchone()
 		user_id=user_id[0]
+
+		
 		print(user_id)
 
 		if review=='':
 			return render_template('error.html',message="Please write your review in the field provided.")
-		elif db.execute(f"SELECT user_id FROM reviews WHERE book_id=:book_id",{"book_id":book_id}).rowcount != 0:
+		elif db.execute(f"SELECT user_id FROM reviews WHERE book_id=:book_id AND user_id=:user_id",{"book_id":book_id,"user_id":user_id}).rowcount != 0:
 			return render_template('error.html',message="Oops!You have already reviewed this book.Each user is allowed only one review for each book.")
 		# elif db.execute(f"SELECT book_id FROM reviews WHERE book_id=:book_id",{"book_id":book_id}).rowcount != 0:
 		# 	return render_template('error.html',message="Oops! You have already reviewed this book. Please try anoher book!")
 		else:
 			db.execute(f"INSERT INTO reviews(user_id,book_id,review) VALUES(:user_id,:book_id,:review)",{"user_id":user_id,"book_id":book_id, "review":review})
 			db.commit()
-			return render_template('success.html',message="Your review has been added to the book. Thank you for your valuable contributions!")
-	return render_template("review.html")
+			return render_template('success.html',message="Your review has been added to the book. Thank you for your valuable contributions!",bookDetails1=bookDetails1)
+	return render_template("review.html",bookDetails1=bookDetails1)
 
 

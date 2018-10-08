@@ -5,6 +5,7 @@ psycopg2
 SQLAlchemy
 Flask-WTF
 flask_login
+requests
 
 
 #Flask-migrate is a way of creating database table from auto-flask generating

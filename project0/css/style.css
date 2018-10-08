@@ -34,11 +34,13 @@
 }
 
 #aboutBg{
-	background-image:url(../img/about_us.jpg);
+	/*background-image:url(../img/about_us.jpg);*/
 	background-size: 100% auto;
 	padding-top: 10%;
+	padding-bottom:10%;
 	height: 100%;
 	background-blend-mode: luminosity;
+
 }
 
 #jumbotron {
@@ -61,7 +63,7 @@
 #volunteer {
 	background:#f3f3f3;
 	background-blend-mode: lighten;
-	box-shadow: 5px 10px 12px 12px/*#FF0000*/#132667;
+	box-shadow: 2px 8px 8px 2px/*#FF0000*/#132667;
 	opacity: 0.9;
 }
 footer {

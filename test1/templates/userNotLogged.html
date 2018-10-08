@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User - Not Logged in!
+{% endblock %}
+
+{% block content %}
+
+
+<div class="jumbotron">
+  <h1>Sorry, Your need to log in to access this page!</h1> 
+
+  <div class="col-lg-12 row">
+    <div class="row col-lg-2">
+        <div class="text-right">
+            <a type="button" class="btn btn-primary btn-lg" href="{{url_for('signin')}}">Login</a>
+        </div>
+        <div class="row col-lg-2">
+        <div class="text-left">
+            <a type="button" class="btn btn-primary btn-lg" href="{{url_for('signup')}}">Sign up</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

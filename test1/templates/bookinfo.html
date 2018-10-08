@@ -1,9 +1,11 @@
 {% extends 'layout.html' %}
-
+<!-- <link rel="stylesheet" type="text/css" href="./static/footer.css"> -->
 {% block title %}
-  Home Page
+Book Details
 {% endblock %}
 	{%block content %}
+    
+  
 	 <h1>Book Info</h1>
    <br>
    <hr>
@@ -12,28 +14,58 @@
      <h4>Author : {{bookDetails.author}}</h4>
      <h4>ISBN  : {{bookDetails.isbn_id}}</h4>
      <h4>Publish Year  : {{bookDetails.year}}</h4>
+     <a href="{{url_for('api_Access',isbn_id=bookDetails.isbn_id)}}">Access API</a>
     
     <br>
-  <hr>
 
-    <h2>Reviews by users</h2>
+    <div class="row col-lg-12">
+      <div class="col-lg-6">
+        <h5 class="col"><a href="{{url_for('review',book_id=bookDetails.book_id)}}">Review Now</a></h5>
+        <hr style="width: 100%;border: 0 !important;
+                              height: 55px !important;
+                              background-image: url(../static/images/type_4.png) !important;
+                              background-repeat: no-repeat !important;" class="col type_4" align="left">
 
-    <form class="justify-content-center" method="post">
-      <h3>Add your review</h3>
-        <div class="form-group col-lg-3">
-            <input class="form-control" type='text' name="review" placeholder="type your reviews here">
-            
+        {%for info in bookReviews %}
+        <div class="col"> 
+          <h5 class="row col"> <span style="color: blue !important; " class="mr-2" >{{info.username  }}</span> says:</h5>
+            <p><span style="color: green;">User rating: {{info.ratings}}</span></p>
+            <p class="row col">{{info.review}}</p>
+            <hr style="width: 100%;border: 0 !important;
+              height: 55px !important;
+              background-image: url(../static/images/type_4.png) !important;
+              background-repeat: no-repeat !important;" class="col-lg-3 type_4" align="left">
         </div>
-        <div class="form-group col-lg-3"><button class="form-control btn btn-primary">Post</button>
+
+
+        {% endfor %}
+
+      </div>
+      <div class="col-lg-6">
+        <h5 class="col"><a href="{{url_for('index')}}">Go back homepage</a></h5>
+        <hr style="width: 100%; border: 0 !important;
+                  height: 55px !important;
+                  background-image: url(../static/images/type_4.png) !important;
+                  background-repeat: no-repeat !important;" class="col type_4" align="left">
+        <div class="col">
+          <h5 style="color: orange !important;">Goodreads ratings:</h5>
+          {%for book in data['books']%}
+          <p><span style="color: green;">Goodreads Total rating: {{book['work_ratings_count']}}</span></p>
+          <p><span style="color: green;">Goodreads Average Rating: {{book['average_rating']}}</span></p>
+
+        {%endfor%}
+
         </div>
 
-    </form>
-    <p><span>{{reviews.user_id}}</span>{{reviews.review}}</p>
+        
 
-    
+      </div>
+      
+      
+    </div>
+
+  
+
 
 	
 	{% endblock%}
-
-</body>
-</html>

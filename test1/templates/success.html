@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Congratulations! you have successfully registered!</h1><br>
+    <h1>Congratulations!{{message}}!</h1><br>
     <h3><a href="{{url_for('index')}}">Go to home page to log in!</a>
+    <h3><a href="{{url_for('search',book_id=bookDetails1.book_id)}}">Read reviews!</a>
 
 {% endblock %}
