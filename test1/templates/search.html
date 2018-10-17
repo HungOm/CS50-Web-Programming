@@ -1,10 +1,12 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Book-search
+    search
 {% endblock %}
 
 {% block content %}
+<div class="review">
+    
     <h1>Books</h1>
     <hr>
      {%for book in name_input%}
@@ -18,5 +20,8 @@
     </div>
     
      {%endfor%}
+
+</div>
+    
 
 {% endblock %}

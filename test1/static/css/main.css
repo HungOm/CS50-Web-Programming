@@ -1,0 +1,53 @@
+
+#content{
+	min-height: 100vh;
+	/*background: 1200px;*/
+	padding-top: 5%;
+	margin: 0;
+	background: url("/static/images/api_cover.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+
+}
+
+/*#index{
+	min-height: 100vh;
+	margin: 0 auto;
+	background: url("/static/images/book_background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}*/
+
+
+/*div.review{
+	min-height: 100vh;
+	margin: 0 auto;
+	background: url("/static/images/book_info.jpg");
+	background:url('{{url_for('static',filename='images/book_info.jpg')}}');
+	background-size: cover;
+	background-repeat: no-repeat;
+}*/
+
+div.api{
+	text-decoration-color: white;
+}
+
+div h1{
+	font-family: 'mali',cursive;
+}
+
+
+div .buttonBox{
+	display: flex;
+	margin:-10px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+div  .buttonBox>* {
+        flex: 1 1 160px;
+        margin: 10px;
+      }

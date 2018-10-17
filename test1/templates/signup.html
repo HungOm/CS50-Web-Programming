@@ -1,10 +1,46 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    signup
+    Sign Up
 {% endblock %}
 
 {% block content %}
+
+
+<div class="card wrapper col-lg-4 justify-content-centers">
+  <div class="card-header">
+<h1>Register</h1>
+  </div>
+  <div class="card-body">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32,class="form-control col-4") }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32, class="form-control col-lg-4") }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32,class="form-control col-lg-4") }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(class="btn-primary")}}</p>
+    </form>
+  </div>
+</div>
+
+
 <div class="col-12 container">
     <h1>Register</h1>
     <form action="" method="post">

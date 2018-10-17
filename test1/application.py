@@ -131,7 +131,7 @@ def signup():
 			db.execute("INSERT INTO users2(username, email, password) VALUES(:username, :email, :password)",
 				{"username":username,"email":email,"password":password})
 			db.commit()
-			return render_template("success.html")
+			return render_template("registered.html",message="You're now a registered user!")
 		else:
 			return render_template('error.html',message="User already registered. Please use another username")
 	return render_template("signup.html",form=form)
@@ -205,10 +205,14 @@ def api():
 	if 'username' in session:
 		if request.method=='POST':
 			name = request.form.get('isbn')
+			if name=='':
+				return render_template('api_Access.html',message="Please enter name/author/isbn of the book.")
+
 			title_input=db.execute(f"SELECT * FROM myBooks WHERE title LIKE '%{name}%' OR isbn_id LIKE '{name}' OR author LIKE '%{name}%'").fetchall()
 					# print(title_input)
 			if title_input==[]:
 				return render_template('error.html',message="Sorry, no such book in our database.")
+			
 			if title_input is None:
 				return render_template('api_Access.html',message="Please search name of book/author/isbn")
 			return render_template('api_Access.html', title_input=title_input)

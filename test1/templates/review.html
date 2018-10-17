@@ -3,14 +3,6 @@
 {% block title %}
     Book-search
 {% endblock %}
-
-{% block content %}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script src="{{url_for('static', filename='rating.js')}}"></script>
 
 <style type="text/css">
@@ -22,7 +14,11 @@
 
 </style>
 
-    <h1>Book Review</h1>
+{% block content %}
+
+<div class="review">
+    
+<h1>Book Review</h1>
     <hr>
 
     <h4>{{bookDetails1.title}}</h4>
@@ -74,5 +70,8 @@
     </form>
     <hr>
 
+
+</div>
+    
 
 {% endblock %}
