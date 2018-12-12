@@ -7,21 +7,20 @@
 {% block content %}
 
 
-<div class="jumbotron">
+<div class="jumbotron text-center">
   <h1>Sorry, Your need to log in to access this page!</h1> 
+  <div class="container pt-3">
+      <div class="row text-center buttonBox">
+        <div class="row text-right col-sm-2">
+            <a type="button" class="btn btn-primary btn-lg btn-block" href="{{url_for('signin')}}" role="button">Login</a>
+        </div>
+        <div class="row text-left col-sm-2">
+            <a type="button" class="btn btn-primary btn-lg btn-block" href="{{url_for('signup')}}" role="button">Sign up</a>
+        </div>
+  </div>
 
-  <div class="col-lg-12 row">
-    <div class="row col-lg-2">
-        <div class="text-right">
-            <a type="button" class="btn btn-primary btn-lg" href="{{url_for('signin')}}">Login</a>
-        </div>
-        <div class="row col-lg-2">
-        <div class="text-left">
-            <a type="button" class="btn btn-primary btn-lg" href="{{url_for('signup')}}">Sign up</a>
-        </div>
-    </div>
-    </div>
-    </div>
+  </div>
+ 
 
 </div>
 

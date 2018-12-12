@@ -45,7 +45,8 @@ def before_request():
 def home():
 	if 'username' in session:
 		return redirect(url_for('index'))
-	return render_template('entry.html')
+	username=[]
+	return render_template('entry.html',username=username)
 
 
 

@@ -3,6 +3,38 @@
 {% block title %}
   API Access
 {% endblock %}
+{% block nav %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler-Om" aria-controls="navbar-toggler-Om" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="{{url_for('home')}}">Bookii</a>
+
+  <div class="collapse navbar-collapse" id="navbar-toggler-Om">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item ">
+        <a class="nav-link" href="{{url_for('index')}}">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('api') }}">API Access <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+   <!--  <ul>
+        <li class="nav-item text-right">
+        <a class="nav-link" href="{{ url_for('api') }}">API Access</a>
+      </li>
+    </ul> -->
+  </div>
+
+  <div class="row text-right">
+            <a type="button" class="btn btn-dark"href="{{url_for('signout')}}" role="button">Sign Out</a>
+        </div>
+</nav>
+
+</nav>
+
+{% endblock %}
 
 
 {% block content %}
@@ -10,7 +42,7 @@
 
 
 
-<div class="api wrapper">
+<div class="api wrapper pl-4">
   <h1>API Acess</h1> 
   {{message}}
 
@@ -25,14 +57,15 @@
 
     </form>
 
-  <div class="col-lg-12 row">
-    <h6>
+  <div class="container col-lg-12">
+    <h6 class="row-lg-2">
         {%for book in title_input %}
-        <div class="row col">
-          {{book.book_id}}
-          {{book.author}}
-          {{book.isbn_id}}
+        <div class="col-lg-3">
+          <p>Book Name:{{book.title}}</p>
+          <p>Author:{{book.author}}</p>
+          <p>ISBN:{{book.isbn_id}}</p>
           <a href="{{url_for('api_Access',isbn_id=book.isbn_id)}}">Access API</a>
+          <hr style="width: 100%;">
         </div>
         
       {%endfor%}

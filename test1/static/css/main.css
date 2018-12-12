@@ -3,12 +3,23 @@
 	min-height: 100vh;
 	/*background: 1200px;*/
 	padding-top: 5%;
+	padding-bottom: 5%;
 	margin: 0;
 	background: url("/static/images/api_cover.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	
 
+}
+
+#NoFound{
+padding-top: 7%;
+
+}
+#searhForm{
+	align-content: center;
+	justify-content: center;
 }
 
 /*#index{
@@ -51,3 +62,72 @@ div  .buttonBox>* {
         flex: 1 1 160px;
         margin: 10px;
       }
+
+ form .buttonBox2 {
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	justify-content: center;
+ 	align-items: center;
+ 	flex-direction: row;
+ }
+
+ form .buttonBox2>* {
+ 	flex:1 1 160px;
+ 	 margin: 10px;
+ }
+
+ 
+div.card{
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 90%;
+	margin-bottom: 80px;
+}
+
+
+div .review{
+	margin-left:50px;
+}
+
+div p span .goodreads{
+	text-decoration-color: white;
+}
+
+
+
+ @media (max-width: 790px){
+
+#content{
+	min-height: 100vh !important;
+	/*background: 1200px;*/
+	padding-top: 15%;
+	margin:0;
+	background: url("/static/images/api_cover.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*margin-bottom: 80px;*/
+	
+
+}
+
+
+#NoFound{
+padding-top: 20%;
+
+}
+
+div.card{
+	margin-top: 30%;
+	margin-left:0;
+	/*padding-right:30px;*/
+	/*margin-right: 20%;*/
+	margin-bottom: 5%;
+}
+
+div .index{
+
+	margin-top: 15%;
+}
+}
+
+ 

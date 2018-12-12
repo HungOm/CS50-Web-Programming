@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 	#document.querySeclector('h1')
+	#document.querySeclector("#id")
+	#document.querySeclector(".class") -->
+
+	<script type="text/javascript">
+		if(!localStorage.getItem('counter'));
+		localStorage.setItem('counter',0);
+
+		document.addEventListener("DOMContentLoaded", ()=>{
+			document.querySelector('#counter').innerHTML=localStorage.getItem('counter');
+
+
+			document.querySelector('button').onclick=()=>{
+				let counter=localStorage.getItem('Counter');
+				Counter++;
+
+
+			document.querySelector("#counter").innerHTML=counter;
+			localStorage.setItem('counter',counter)
+			}
+		});
+
+
+
+	</script>
+	<title></title>
+</head>
+<body>
+	<h1 id="counter">0</h1>
+	<button>Click here</button>
+
+</body>
+</html>

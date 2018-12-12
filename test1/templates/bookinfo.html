@@ -10,6 +10,32 @@ Book Details
 {% endblock %}
 
 
+{% block nav %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler-Om" aria-controls="navbar-toggler-Om" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="{{url_for('home')}}">Bookii</a>
+
+  <div class="collapse navbar-collapse" id="navbar-toggler-Om">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('api') }}">API Access</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row text-right">
+            <a type="button" class="btn btn-dark"href="{{url_for('signout')}}" role="button">Sign Out</a>
+        </div>
+</nav>
+{% endblock %}
+
+
 	{%block content %}
 
   <div class="review">
@@ -59,8 +85,8 @@ Book Details
         <div class="col">
           <h5 style="color: orange !important;">Goodreads ratings:</h5>
           {%for book in data['books']%}
-          <p><span style="color: green;">Goodreads Total rating: {{book['work_ratings_count']}}</span></p>
-          <p><span style="color: green;">Goodreads Average Rating: {{book['average_rating']}}</span></p>
+          <p style="color: green;">Goodreads Total rating: <span style="background-color: #2b0c18; color:white; border-radius: 10%;">{{book['work_ratings_count']}}</span></p>
+          <p style="color: green;">Goodreads Average Rating: <span style="background-color: #2b0c18; color:white; border-radius: 10%;">{{book['average_rating']}}</span></p>
 
         {%endfor%}
 

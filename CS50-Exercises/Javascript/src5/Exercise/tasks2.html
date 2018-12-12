@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	document.addEventListener('DOMContentLoaded',()=>{
+
+
+
+		document.querySelector("#submit").disabled = true;
+
+		document.querySelector('#task').onkeyup=()=>{
+
+
+			if (document.querySelector("#task").value.length>0)
+				document.querySelector('#submit').disabled=false;
+
+			else
+				document.querySelector('#submit').disabled=true;
+		};
+
+		document.querySelector('#new-task').onsubmit = ()=>{
+
+			const li=document.createElement('li');
+			li.innerHTML=document.querySelector('#task').value;
+
+
+			// Add li var in into task array
+			document.querySelector("#tasks").append(li);
+
+
+
+			document.querySelector("#task").value='';
+			document.querySelector("#submit").disabled = true;
+
+
+
+
+			return false;
+
+		};
+
+
+
+	});
+</script>
+	<title>Tasks2</title>
+</head>
+<body>
+	<h1>Tasks2</h1>
+
+	<ul id="tasks">	
+
+	</ul>
+
+	<form id="new-task">
+		
+		<input type="text" id="task" autocomplete="off" name="" placeholder="new tasks">
+		<input type="submit" id="submit">
+	</form>
+
+</body>
+</html>

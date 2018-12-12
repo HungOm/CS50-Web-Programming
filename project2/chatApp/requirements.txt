@@ -1,0 +1,7 @@
+Flask
+Flask-SocketIO
+Flask-wtf
+Flask-SQLAchemy
+Flask_session
+psycopg2
+Flask_login

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	document.addEventListener('DOMContentLoaded',()=>{
+
+		document.querySelector('#new-task').onsubmit = ()=>{
+
+			const li=document.createElement('li');
+			li.innerHTML=document.querySelector('#task').value;
+
+
+			// Add li var in into task array
+			document.querySelector("#tasks").append(li);
+
+
+
+			document.querySelector("#task").value='';
+
+			return false;
+
+		};
+
+
+
+	});
+</script>
+	<title>Tasks</title>
+</head>
+<body>
+	<h1>Tasks</h1>
+
+	<ul id="tasks">	
+
+	</ul>
+
+	<form id="new-task">
+		
+		<input type="text" id="task" autocomplete="off" name="" placeholder="new tasks">
+		<input type="submit">
+	</form>
+
+</body>
+</html>
